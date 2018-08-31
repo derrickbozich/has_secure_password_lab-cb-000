@@ -3,13 +3,13 @@ class UsersController < ApplicationController
     @user = User.new(:name => params[:name], :password => params[:password])
 
     if @user.save
-
+      redirect_to :welcome
     else
 
     end
   end
 
   def welcome
-    redirect_to :welcome
+    render :welcome
   end
 end
