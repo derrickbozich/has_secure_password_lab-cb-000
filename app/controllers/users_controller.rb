@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    binding.pry
     @user = User.new(:name => params[:name], :password => params[:password])
 
     if @user.save
