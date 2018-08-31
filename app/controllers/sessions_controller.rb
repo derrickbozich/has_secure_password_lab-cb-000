@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
   def create
-    @user = User.find_by(:name => params[:name])
+    @user = User.find_by(:name => params[:user][:name])
     binding.pry
-    if @user.authenticate(params[:password])
+    if @user.authenticate(params[:user][:password])
       redirect_to welcome_path
     else
       redirect_to login_path
