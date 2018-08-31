@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(:name => params[:user][:name], :password => params[:user][:password])
 
     if @user.save
-      session[:name] = @user.name
+      session[:user_id] = @user.id
       redirect_to welcome_path
     else
       redirect_to new_user_path
