@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
 
     @user = User.new(:name => params[:user][:name], :password => params[:user][:password])
-    
+
     if @user.save
       redirect_to welcome_path
     else
