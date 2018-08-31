@@ -9,6 +9,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def create
+    
+  end
+
   def welcome
     render :welcome
   end
