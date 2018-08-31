@@ -10,6 +10,6 @@ class UsersController < ApplicationController
   end
 
   def welcome
-    render :welcome
+    redirect_to :welcome
   end
 end
